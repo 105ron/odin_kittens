@@ -1,0 +1,17 @@
+<table>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Cuteness</th>
+	<th>Softness</th>
+	<th>Delete?</th>
+	<% kitten.each do |b| %>
+   <tr>
+	    <td><%= b.id %></td>
+	    <td><%= b.name %> </td>
+	    <td><%= b.cuteness %></td>
+	    <td><%= b.softness %></td>
+	    <td><%=link_to "Delete", kitten_path(b), html_options = {method: "delete"} %></td>
+	  </tr>
+  <% end %>
+</table>
+		

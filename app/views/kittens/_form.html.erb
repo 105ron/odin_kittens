@@ -1,0 +1,20 @@
+<%= form_for(kitten, html: {multipart: true}) do |f| %>
+	<ul>
+  <% kitten.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <%= f.label :name, 'Your  kitten\'s name' %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :age, 'Your kitten\'s age' %>
+  <%= f.text_field :age %>
+  <br>
+  <%= f.label :cuteness %>
+  <%= f.text_field :cuteness %>
+  <br>
+  <%= f.label :softness %>
+  <%= f.text_field :softness %>
+  <br>
+  <%= f.submit 'Submit' %>
+<% end %>
